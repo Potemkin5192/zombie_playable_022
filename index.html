@@ -2913,71 +2913,98 @@ if (reversed == null) { reversed = false; }
 		ui_h.brush.addEventListener('click', chooseBrush)
 		ui_v.saw.addEventListener('click', chooseSaw)
 		ui_h.saw.addEventListener('click', chooseSaw)
-		function chooseShampoo() {
+		function chooseShampoo(evt) {
 			text_mc.gotoAndStop(3)
 			zombie.text_mc.gotoAndPlay(1)
 			pointsUnclickable()
 			hideButtonsSoft()
 			zombie.head.head.normal.gotoAndPlay(90)
+			var currentBtn = evt.currentTarget
+			var targetScale = currentBtn.scaleX * 1.5
+			createjs.Tween.get(currentBtn).to({scaleX: targetScale, scaleY: targetScale}, 500, createjs.Ease.backIn)
 		}
-		function chooseHairMachine() {
+		function chooseHairMachine(evt) {
 			text_mc.gotoAndStop(5)
 			zombie.text_mc.gotoAndPlay(1)
 			pointsUnclickable()
 			hideButtonsSoft()
 			zombie.head.head.normal.gotoAndPlay(1)
+			var currentBtn = evt.currentTarget
+			var targetScale = currentBtn.scaleX * 1.5
+			createjs.Tween.get(currentBtn).to({scaleX: targetScale, scaleY: targetScale}, 500, createjs.Ease.backIn)
 		}
-		function chooseInjector() {
+		function chooseInjector(evt) {
 			text_mc.gotoAndStop(8)
 			zombie.text_mc.gotoAndPlay(1)
 			pointsUnclickable()
 			hideButtonsSoft()
 			brain.gotoAndPlay(1)
 			rightChose = true
+			var currentBtn = evt.currentTarget
+			var targetScale = currentBtn.scaleX * 1.5
+			createjs.Tween.get(currentBtn).to({scaleX: targetScale, scaleY: targetScale}, 500, createjs.Ease.backIn)
 		}
-		function choosePincer() {
+		function choosePincer(evt) {
 			text_mc.gotoAndStop(7)
 			zombie.text_mc.gotoAndPlay(1)
 			pointsUnclickable()
 			hideButtonsSoft()
 			acne.gotoAndPlay(1)
+			var currentBtn = evt.currentTarget
+			var targetScale = currentBtn.scaleX * 1.5
+			createjs.Tween.get(currentBtn).to({scaleX: targetScale, scaleY: targetScale}, 500, createjs.Ease.backIn)
 		}
-		function chooseCream() {
+		function chooseCream(evt) {
 			text_mc.gotoAndStop(9)
 			zombie.text_mc.gotoAndPlay(1)
 			pointsUnclickable()
 			hideButtonsSoft()
 			acne.gotoAndPlay(120)
 			rightChose = true
+			var currentBtn = evt.currentTarget
+			var targetScale = currentBtn.scaleX * 1.5
+			createjs.Tween.get(currentBtn).to({scaleX: targetScale, scaleY: targetScale}, 500, createjs.Ease.backIn)
 		}
-		function chooseRazor() {
+		function chooseRazor(evt) {
 			text_mc.gotoAndStop(6)
 			zombie.text_mc.gotoAndPlay(1)
 			pointsUnclickable()
 			hideButtonsSoft()
 			acne.gotoAndPlay(200)
+			var currentBtn = evt.currentTarget
+			var targetScale = currentBtn.scaleX * 1.5
+			createjs.Tween.get(currentBtn).to({scaleX: targetScale, scaleY: targetScale}, 500, createjs.Ease.backIn)
 		}
-		function chooseHammer() {
+		function chooseHammer(evt) {
 			text_mc.gotoAndStop(1)
 			zombie.text_mc.gotoAndPlay(1)
 			pointsUnclickable()
 			hideButtonsSoft()
 			mouth.hammer.gotoAndPlay(1)
+			var currentBtn = evt.currentTarget
+			var targetScale = currentBtn.scaleX * 1.5
+			createjs.Tween.get(currentBtn).to({scaleX: targetScale, scaleY: targetScale}, 500, createjs.Ease.backIn)
 		}
-		function chooseBrush() {
+		function chooseBrush(evt) {
 			text_mc.gotoAndStop(2)
 			zombie.text_mc.gotoAndPlay(1)
 			pointsUnclickable()
 			hideButtonsSoft()
 			mouth.brush.gotoAndPlay(1)
 			rightChose = true
+			var currentBtn = evt.currentTarget
+			var targetScale = currentBtn.scaleX * 1.5
+			createjs.Tween.get(currentBtn).to({scaleX: targetScale, scaleY: targetScale}, 500, createjs.Ease.backIn)
 		}
-		function chooseSaw() {
+		function chooseSaw(evt) {
 			text_mc.gotoAndStop(1)
 			zombie.text_mc.gotoAndPlay(1)
 			pointsUnclickable()
 			hideButtonsSoft()
 			mouth.saw.gotoAndPlay(1)
+			var currentBtn = evt.currentTarget
+			var targetScale = currentBtn.scaleX * 1.5
+			createjs.Tween.get(currentBtn).to({scaleX: targetScale, scaleY: targetScale}, 500, createjs.Ease.backIn)
 		}
 		function pointsUnclickable() {
 			checkCtaClicks()
@@ -3005,7 +3032,7 @@ if (reversed == null) { reversed = false; }
 				teethButtons[i].alpha = 0
 			}
 		}
-		function hideButtonsSoft() {
+		function hideButtonsSoft(evt) {
 			btnSFX.play()
 			for (i = 0; i < brainButtons.length; i++) {
 				createjs.Tween.get(brainButtons[i], {override:true}).to({alpha:0, visible:false}, 500)
@@ -3210,8 +3237,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"index_atlas_P_1.png?1710247405719", id:"index_atlas_P_1"},
-		{src:"index_atlas_NP_1.jpg?1710247405720", id:"index_atlas_NP_1"}
+		{src:"index_atlas_P_1.png?1710247986605", id:"index_atlas_P_1"},
+		{src:"index_atlas_NP_1.jpg?1710247986605", id:"index_atlas_NP_1"}
 	],
 	preloads: []
 };
